@@ -1,0 +1,19 @@
+[ req ]
+default_bits       = 2048
+default_md         = sha1
+default_keyfile    = site.com.br.key
+prompt             = no
+encrypt_key        = no
+distinguished_name = req_distinguished_name
+req_extensions = san
+# distinguished_name
+[ req_distinguished_name ]
+countryName            = "BR"                                             # C=
+stateOrProvinceName    = "Central"                                        # ST=
+localityName           = "Jaguariuna"                                     # L=
+organizationName       = "SITETOSITE S.A"                                 # O=
+organizationalUnitName = "Tecnologia"                                     # OU=
+commonName             = "www.sitetosite.com.br"                          # CN=
+emailAddress           = "augusto@sitetosite.com.br"                      # CN/email Address=
+[ san ]
+subjectAltName = DNS:mail.sitetosite.com.br, DNS:api.sitetosite.com.br, DNS:buscar.sitetosite.com.br     
